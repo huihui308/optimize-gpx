@@ -55,7 +55,7 @@ print('Tracks: ', len(gpx.tracks))
 print('Routes: ', len(gpx.routes))
 print('Waypoints: ', len(gpx.waypoints))
 
-elevation_data.add_elevations(gpx, smooth=True)
+#elevation_data.add_elevations(gpx, smooth=True)
 
 total_segments = 0
 points_before = 0
@@ -69,7 +69,7 @@ for track in gpx.tracks:
         points_after += len(new_segment.points)
         new_segments += split_by_distance(new_segment)
     track.segments = new_segments
-    
+
 print('Total segments: ', total_segments)
 print('Points before: ', points_before)
 print('Points after: ', points_after)
